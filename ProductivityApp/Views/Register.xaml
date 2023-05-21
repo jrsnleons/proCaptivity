@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProductivityApp.Views.Register"
+              BackgroundColor="#112B47">
+    <ContentPage.Content>
+        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+            <Label Text="Welcome to registration!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            
+            <Entry x:Name="UsernameR" TextColor="White" PlaceholderColor="Gray" Placeholder="Username"></Entry>
+            <Entry x:Name="PasswordR" IsPassword="True" TextColor="White" PlaceholderColor="Gray" Placeholder="Password"></Entry>
+            <Entry x:Name="ConPasswordR" IsPassword="True" TextColor="White" PlaceholderColor="Gray" Placeholder="Confirm Password"></Entry>
+            <Button
+                VerticalOptions="Center"
+                Text="Create account"
+                TextColor="LightBlue"
+                BackgroundColor="Transparent"
+                BorderColor="LightSalmon"
+                BorderWidth="1.5"
+                CornerRadius="50"
+                Clicked="Button_Clicked"
+                ></Button>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
