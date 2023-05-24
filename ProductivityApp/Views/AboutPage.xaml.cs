@@ -16,5 +16,6 @@ namespace ProductivityApp.Views
             Application.Current.Properties.Clear();
             Navigation.PushAsync(new LoginPage());
         }
+
     }
 }
