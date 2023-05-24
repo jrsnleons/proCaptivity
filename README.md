@@ -1,4 +1,4 @@
-![Alt text]( ProductivityApp.Android/Resources/drawable/logo.png   , "logo")
+![Alt text]( https://github.com/jrsnleons/proCaptivity/blob/master/ProductivityApp.Android/Resources/drawable/logo.png   , "logo")
 
 
 
