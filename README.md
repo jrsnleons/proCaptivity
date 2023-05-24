@@ -1,5 +1,4 @@
-![proCaptivity-logo]( https://github.com/jrsnleons/proCaptivity/blob/master/ProductivityApp.Android/Resources/drawable/logo.png?raw=true)
-
+<img src="https://github.com/jrsnleons/proCaptivity/blob/master/ProductivityApp.Android/Resources/drawable/logo.png?raw=true" alt="proCaptivity-logo" width="200"/>
 
 
 # proCaptivity
