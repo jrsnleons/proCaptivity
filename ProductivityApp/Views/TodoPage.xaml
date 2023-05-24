@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ProductivityApp.Models;assembly=ProductivityApp"
+             x:Class="ProductivityApp.Views.TodoPage"
+             Title="My Todo"
+             BackgroundColor="#112B47">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:TextDecorationsConverter x:Key="textDecorationsConverter" />
+            <local:BoolToColorConverter x:Key="boolToColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <AbsoluteLayout>
+        <StackLayout>
+            <ListView x:Name="todo" Margin="5" VerticalOptions="FillAndExpand" ItemSelected="OnItemSelected" BackgroundColor="#0A192A">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <!-- Column Definitions -->
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="5*"/>
+                                    <ColumnDefinition Width="1.5*"/>
+                                    <ColumnDefinition Width="1.5*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <!-- Row Definitions -->
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+
+                                <!-- Todo name -->
+                                <Label Grid.Column="0" Text="{Binding title}"
+                                    VerticalOptions="Center"
+                                    MaxLines="1"
+                                    LineBreakMode="TailTruncation"
+                                    FontSize="20" 
+                                    FontAttributes="Bold" 
+                                    TextDecorations="{Binding completed, Converter={StaticResource textDecorationsConverter}}"
+                                    TextColor="{Binding completed, Converter={StaticResource boolToColorConverter}}"/>
+
+                                <!-- Done button -->
+                                <Button Grid.Column="1" Text="Done" WidthRequest="60" Clicked="toggleComplete" BackgroundColor="#A09BE7"/>
+                                <!-- Delete button -->
+                                <Button Grid.Column="2" Text="x"  Clicked="onDelete" BackgroundColor="#0A192A" BindingContext="{Binding .}" TextColor="Red" BorderWidth="1" BorderColor="red"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        <!-- Add Button: navigates to the addTodo page-->
+        <Button 
+            x:Name="addButton"
+            HorizontalOptions="End"
+            VerticalOptions="End"
+            WidthRequest="80"
+            HeightRequest="80"
+            CornerRadius="45"
+            Text="+"
+            Clicked="addATodo"
+            FontSize="40"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="1, 1, AutoSize, AutoSize"
+            Margin = "20,20"
+            BackgroundColor="#A09BE7"/>
+    </AbsoluteLayout>
+</ContentPage>

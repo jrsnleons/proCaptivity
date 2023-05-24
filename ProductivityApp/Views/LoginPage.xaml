@@ -7,6 +7,7 @@
              BackgroundColor="#112B47"
              x:Class="ProductivityApp.Views.LoginPage"
              Shell.NavBarIsVisible="False">
+            
     <ContentPage.Content>
 
         <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
@@ -33,9 +34,11 @@
                         <Span Text="Click here!" FontAttributes="Bold" TextDecorations="Underline"></Span>
                     </FormattedString>
                 </Label.FormattedText>
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                </Label.GestureRecognizers>
+                <!--
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                -->
             </Label>
 
 

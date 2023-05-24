@@ -11,8 +11,10 @@ namespace ProductivityApp
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+
+            if (!Application.Current.Properties.ContainsKey("token")){
+                Navigation.PushAsync(new LoginPage());
+            }
         }
 
     }

@@ -14,8 +14,8 @@ namespace ProductivityApp
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            /*MainPage = new AppShell();*/
-            MainPage = new NavigationPage (new LoginPage());
+            MainPage = new AppShell();
+            /*MainPage = new NavigationPage (new Home()); */
         }
 
         protected override void OnStart()
