@@ -10,7 +10,6 @@
     <ContentPage.Content>
 
         <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
-
             <Image Source="Logo.jpg" WidthRequest="190" HeightRequest="180"></Image>
 
             <Entry x:Name="Usernametxt" TextColor="White" PlaceholderColor="Gray" Placeholder="Username"></Entry>

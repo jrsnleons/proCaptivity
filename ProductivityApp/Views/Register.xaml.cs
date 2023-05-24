@@ -30,7 +30,7 @@ namespace ProductivityApp.Views
             else
             {
                 DisplayAlert("User created!", "Congratulations, the user has been created", "Okay");
-                Navigation.PushAsync(new LoginPage());
+                Navigation.PushAsync(new Home(UsernameR.Text));
             }
         }
     }

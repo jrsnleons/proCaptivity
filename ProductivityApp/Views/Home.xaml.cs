@@ -12,9 +12,12 @@ namespace ProductivityApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Home : ContentPage
     {
-        public Home()
+        public Home(string usernametxt)
         {
             InitializeComponent();
+            UsernameLabel.Text = $"Welcome, {usernametxt}!";
+
+
         }
     }
 }

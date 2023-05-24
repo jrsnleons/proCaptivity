@@ -27,7 +27,7 @@ namespace ProductivityApp.Views
             }
             else
             {
-                Navigation.PushAsync(new Home());
+                Navigation.PushAsync(new Home(Usernametxt.Text));
             }
            
         }
