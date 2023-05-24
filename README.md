@@ -4,7 +4,10 @@
 # proCaptivity
 
 An all in one productivity app that consists of a todo list, calculator, and a pomodoro timer.
+Made only for android because it is less hassle and much better.
+Made for our mobile development class using Xamarin.Forms.
 
-Developed by:
-[Jerson Leones] (https://www.github.com/jrsnleons)
-[Joel Jayme] (https://github.com/Noob11413)
+
+### Developed by:<br />
+- [Jerson Leones](https://www.github.com/jrsnleons)<br />
+- [Joel Jayme](https://github.com/Noob11413)
