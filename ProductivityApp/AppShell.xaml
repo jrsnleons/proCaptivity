@@ -3,7 +3,8 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:ProductivityApp.Views"
        Title="ProductivityApp"
-       x:Class="ProductivityApp.AppShell">
+       x:Class="ProductivityApp.AppShell"
+       BackgroundColor="#112B47">
 
     <!--
         The overall app visual hierarchy is defined here, along with navigation.
@@ -14,15 +15,15 @@
     <Shell.Resources>
         <ResourceDictionary>
             <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.BackgroundColor" Value="#112B47" />
                 <Setter Property="Shell.ForegroundColor" Value="White" />
                 <Setter Property="Shell.TitleColor" Value="White" />
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
-                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
-                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
-                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
-                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+                <Setter Property="Shell.UnselectedColor" Value="#0A192A" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="#112B47" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="#A09BE7"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#586a7e"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="#FAF9F9"/>
             </Style>
             <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
             <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
@@ -31,7 +32,9 @@
 
     <TabBar>
         <ShellContent Title="About" Icon="icon_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
-        <ShellContent Title="Browse" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}" />
+        <ShellContent Title="Todo" Icon="icon_feed.png" Route="TodoPage" ContentTemplate="{DataTemplate local:TodoPage}" />
+        <ShellContent Title="Pomodoro" Icon="icon_feed.png" Route="PomoPage" ContentTemplate="{DataTemplate local:PomodoroPage}" />
+        <ShellContent Title="Calculator" Icon="icon_feed.png" Route="CalcPage" ContentTemplate="{DataTemplate local:CalculatorPage}" />
     </TabBar>
 
     <!--

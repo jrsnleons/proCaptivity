@@ -1,4 +1,6 @@
-﻿using ProductivityApp.ViewModels;
+﻿using Newtonsoft.Json;
+using ProductivityApp.Models;
+using ProductivityApp.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +18,9 @@ namespace ProductivityApp.Views
         {
             InitializeComponent();
             /* this.BindingContext = new LoginViewModel();*/
+
+            Shell.SetTabBarIsVisible(this, false);
+
         }
 
         private void Login_Clicked(object sender, EventArgs e)
@@ -27,14 +32,34 @@ namespace ProductivityApp.Views
             }
             else
             {
-                Navigation.PushAsync(new Home(Usernametxt.Text));
+                var user = new UserAccount
+                {
+                    username = Usernametxt.Text,
+                    password = Passwordtxt.Text,
+                };
+
+                var userJson = JsonConvert.SerializeObject(user);
+
+                Application.Current.Properties.Add("token", userJson);
+                Application.Current.SavePropertiesAsync();
+
+                Navigation.PopAsync();
+           
             }
            
         }
 
+        /*
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             Navigation.PushAsync(new Register());
         }
+        */
+
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
+
     }
 }

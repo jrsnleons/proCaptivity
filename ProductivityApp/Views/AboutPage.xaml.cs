@@ -11,5 +11,10 @@ namespace ProductivityApp.Views
         {
             InitializeComponent();
         }
+        public void logoutUser(object sender, EventArgs args)
+        {
+            Application.Current.Properties.Clear();
+            Navigation.PushAsync(new LoginPage());
+        }
     }
 }
