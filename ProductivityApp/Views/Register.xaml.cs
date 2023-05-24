@@ -15,6 +15,7 @@ namespace ProductivityApp.Views
         public Register()
         {
             InitializeComponent();
+            Shell.SetTabBarIsVisible(this, false);
         }
 
         private void Button_Clicked(object sender, EventArgs e)
@@ -30,7 +31,7 @@ namespace ProductivityApp.Views
             else
             {
                 DisplayAlert("User created!", "Congratulations, the user has been created", "Okay");
-                Navigation.PushAsync(new Home(UsernameR.Text));
+                Navigation.PopAsync();
             }
         }
     }

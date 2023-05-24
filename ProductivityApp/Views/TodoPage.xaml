@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:ProductivityApp.Models;assembly=ProductivityApp"
              x:Class="ProductivityApp.Views.TodoPage"
              Title="My Todo"
-             BackgroundColor="#112B47">
+             BackgroundColor="#0A192A">
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:TextDecorationsConverter x:Key="textDecorationsConverter" />
@@ -13,7 +13,7 @@
     </ContentPage.Resources>
     <AbsoluteLayout>
         <StackLayout>
-            <ListView x:Name="todo" Margin="5" VerticalOptions="FillAndExpand" ItemSelected="OnItemSelected" BackgroundColor="#0A192A">
+            <ListView x:Name="todo" Margin="10" VerticalOptions="FillAndExpand" ItemSelected="OnItemSelected" BackgroundColor="#0A192A">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

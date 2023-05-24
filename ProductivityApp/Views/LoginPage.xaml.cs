@@ -49,12 +49,12 @@ namespace ProductivityApp.Views
            
         }
 
-        /*
+
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             Navigation.PushAsync(new Register());
         }
-        */
+
 
         protected override bool OnBackButtonPressed()
         {

@@ -4,41 +4,44 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             BackgroundColor="#112B47"
+             BackgroundColor="#0A192A"
              x:Class="ProductivityApp.Views.LoginPage"
              Shell.NavBarIsVisible="False">
             
     <ContentPage.Content>
 
         <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
-            <Image Source="Logo.jpg" WidthRequest="190" HeightRequest="180"></Image>
+            <Image Source="Logo.jpg" WidthRequest="190" HeightRequest="180" Margin="20"/>
 
             <Entry x:Name="Usernametxt" TextColor="White" PlaceholderColor="Gray" Placeholder="Username"></Entry>
-            <Entry x:Name="Passwordtxt" IsPassword="True" TextColor="White" PlaceholderColor="Gray" Placeholder="Password"></Entry>
+            <Entry x:Name="Passwordtxt" IsPassword="True" TextColor="White" PlaceholderColor="Gray" Placeholder="Password"/>
+            <Label HorizontalOptions="Center" Margin="10">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Don't have an account? "/>
+                        <Span Text="Click here!" FontAttributes="Bold" TextDecorations="Underline"/>
+                    </FormattedString>
+                </Label.FormattedText>
+
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+
+            </Label>
+
             <Button
                 VerticalOptions="Center"
                 Text="Login"
                 TextColor="LightBlue"
                 BackgroundColor="Transparent"
-                BorderColor="LightSalmon"
-                BorderWidth="1.5"
+                BorderColor="#A09BE7"
+                BorderWidth="2"
                 CornerRadius="50"
                 Clicked="Login_Clicked"
-                ></Button>
+                Margin="40"
+                />
 
-            <Label HorizontalOptions="Center">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Don't have an account? "></Span>
-                        <Span Text="Click here!" FontAttributes="Bold" TextDecorations="Underline"></Span>
-                    </FormattedString>
-                </Label.FormattedText>
-                <!--
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                    </Label.GestureRecognizers>
-                -->
-            </Label>
+
 
 
         </StackLayout>

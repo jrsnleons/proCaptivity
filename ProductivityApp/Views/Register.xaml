@@ -2,12 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProductivityApp.Views.Register"
-              BackgroundColor="#112B47">
+              BackgroundColor="#0A192A">
     <ContentPage.Content>
         <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
-            <Label Text="Welcome to registration!"
+            <Label Text="Sign Up"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand"
+                FontSize="50"
+                   Margin="20"
+                />
             
             <Entry x:Name="UsernameR" TextColor="White" PlaceholderColor="Gray" Placeholder="Username"></Entry>
             <Entry x:Name="PasswordR" IsPassword="True" TextColor="White" PlaceholderColor="Gray" Placeholder="Password"></Entry>
@@ -17,9 +20,10 @@
                 Text="Create account"
                 TextColor="LightBlue"
                 BackgroundColor="Transparent"
-                BorderColor="LightSalmon"
+                BorderColor="#A09BE7"
                 BorderWidth="1.5"
                 CornerRadius="50"
+                Margin="40"
                 Clicked="Button_Clicked"
                 ></Button>
         </StackLayout>
